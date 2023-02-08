@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/qcz0pve.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="script" type="text/js" href="script.js">
     <title>Webbshop</title>
 </head>
 <body>
@@ -13,10 +16,27 @@
         <source src = "images/hackervideo.mp4" type="video/mp4">
     </video>
     <div class = meny>
-        <h1>
-            Meny
-        </h1>
+        <nav class = menyButton>
+            <h1 class="logoname">Menu</h1>
+            <i class="bx bx-menu"></i>
+            <div class = sidebar>
+                <nav class = menyButton>
+                    <h1 class="logoname">Menu</h1>
+                    <i class="bx bx-menu meny-icon"></i>
+                    </nav>
+                <div class=sidebarContent>
+                    <ul class = lists>
+                        <li class=list>
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-home-alt' >Home</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
 </div>
+<section class="overlay"></section>
 </body>
 </html>
