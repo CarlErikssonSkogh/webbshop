@@ -2,11 +2,21 @@ body{
     margin:0;
     padding:0;
     width:100%;
+    max-width:100%;
+    overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 *{
-    
+ 
     font-family: "ocr-a-std", monospace;
+}
+
+.background{
+    display:flex;
 }
 .mainParrent{
     display:flex;
@@ -30,11 +40,10 @@ body{
 }
 
 .gifVideo{
-    position: fixed;
     right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    object-fit: cover;
+    height:100vh;
+    width:100%;
 }
 
 .sidebar {
@@ -77,8 +86,12 @@ body{
 }
 
 .openbtn:hover {
-    background-color: #2b9348;
+    background-color:rgb(25, 121, 1);
+    filter:grayscale(80%);
 }
+.sidebar a:hover {
+    filter: brightness(10%);
+  }
 
 #main {
     transition: margin-left 0.5s;
@@ -93,4 +106,43 @@ body{
     .sidebar a {
         font-size: 18px;
     }
+}
+
+/*Expore*/
+#section2{
+    background-image: url(images/green\ waves.jpg);
+    background-color:black;
+    height:100vh;
+    width:100%;
+    background-size:cover;
+    display:flex;
+    border-top: rgb(50, 82, 2);
+    border-top-style: solid;
+    border-top-width:2vh;
+}
+
+/*news*/
+#section3{
+    background-image: url(images/stenvägg.jpg);
+    background-color:black;
+    height:100vh;
+    width:100%;
+    background-size:cover;
+    display:flex;
+    border-top: rgb(50, 82, 2);
+    border-top-width:2vh;
+    border-top-style: solid;
+}
+
+/*about*/
+#section4{
+    background-image: url(images/green\ lines.jpg);
+    background-color:black;
+    height:100vh;
+    width:100%;
+    background-size:cover;
+    display:flex;
+    border-top: rgb(50, 82, 2);
+    border-top-width:2vh;
+    border-top-style: solid;
 }
