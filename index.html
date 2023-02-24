@@ -3,46 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/qcz0pve.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="script.js"></script>
     <title>Webbshop</title>
 </head>
 <body> 
 <div class="background">
+    <div class=companyNameParent>
+        <h1 class=companyName>GameStore</h1>
+    </div>
     <video autoplay muted loop class="gifVideo">
-        <source src = "images/hackervideo.mp4" type="video/mp4">
+        <source src = "img/hackervideo.mp4" type="video/mp4">
     </video>
-<div class = main id=section1>
-
-    <nav class = header>
+    <!--Namn på företaget-->
+<!--header + sidebar-->
+<div class = main>
+    <div class = header>
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
-        <a href="#" class=test>Home</a>
-        <a href="#section2"class=test>Explore</a>
-        <a href="#section3"class=test>News</a>
-        <a href="#section4"class=test>About</a>
+        <a href="#">Home</a>
+        <a href="#section2">Explore</a>
+        <a href="#section3">News</a>
+        <a href="#section4">About</a>
     </div>
 
-    
     <div id="main">
         <button class="openbtn" onclick="openSidebar()"><i class='bx bx-menu'></i> Menu</button>
     </div>
-</nav>
+</div>
+<!--logga-->
+<img class=logo src="img/game-controller.png" alt="logo">
 </div>
 </div> 
+
 <div class="explore" id=section2>
-
+    <div class="products-list">
+        <div class="products">
+            <!-- renderar produkter -->
+        </div>
+        <div class="cart">
+            <div class="cart-header">
+                <div class="column1">Item</div>
+                <div class="column2">Unit price</div>
+                <div class="column3">Units</div>
+            </div>
+            <div class="cart-items">
+                <!-- renderar cart items -->
+            </div>
+            <div class="cart-footer">
+                <div class="subtotal">
+                    Subtotal (0 items): $0
+                </div>
+                <div class="checkout">
+                    <a href="checkout.html"class=checkoutBtn>Proceed to checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const porductsListEl = document.querySelector(".products-list");
+        const seeMoreBtn = document.querySelector(".see-more-btn");
+    
+        seeMoreBtn.addEventListener('click', () => {
+            porductsListEl.scrollIntoView({behavior: "smooth"})
+        })
+    </script>
+    
+    <script src="./products.js"></script>
+    <script src="./app.js"></script>
 </div>
 
+<!--Nyheter-->
 <div class="news" id=section3>
-
+    <div class=newsProduct>
+        <div class="item">
+            <div class="item-container">
+                <div class="item-img">
+                    <img src="img/videgameImage.png" alt="product name">
+                </div>
+                <div class="desc">
+                    <h2>Product Name</h2>
+                    <h2><small>$</small>59.99</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odio illum et velit magnam autem eaque ipsam asperiores numquam, explicabo dolores deserunt fugit.
+                    </p>
+                </div>
+                <!--Lägger till produkten i cart-->
+                <div class="add-to-cart" onclick="addToCart(0)">
+                    <img src="./img/bag-plus.png" alt="add to cart">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--About-->
+<div class="about" id=section4>
+    <div class = aboutContainer>
+        <p class = aboutText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi temporibus, natus eius necessitatibus sequi pariatur eos consectetur beatae veritatis itaque aut tempora? Eveniet laudantium, non commodi fugit veniam eum ab?
+        </p>
+        <p class = aboutText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo amet asperiores at et distinctio voluptas magni. Velit consectetur debitis laudantium vero temporibus quam, explicabo, consequuntur architecto eligendi eos voluptatibus beatae.
+        </p>
+        <p class = aboutText>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id reprehenderit hic ducimus illum architecto officiis eaque ullam animi labore officia. Voluptatibus, quaerat obcaecati. Aliquam nulla nostrum et est perspiciatis. Recusandae.
+        </p>
+    </div>
 </div>
 
-<div class="about" id=section4>
-
-</div> 
 </body>
 </html>

@@ -1,0 +1,460 @@
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    max-width:100%;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+*{
+ 
+    font-family: "ocr-a-std", monospace;
+}
+/*Första sektionen(bakgrunden och sidebaren)*/
+.background{
+    display:flex;
+}
+
+/*Namnet på företaget*/
+.companyNameParent{
+    background-color: None;
+    height:100vh;
+    width:0%;
+    display:flex;
+    align-items: flex-end;
+    margin:0;
+    padding:0;
+    z-index:10;
+}
+.companyName{
+    size:50;
+    color:whitesmoke;
+    margin:10vh;
+}
+
+
+.main{
+    width:100%;
+    height:15vh;
+    background-color: greenyellow;
+    display:flex;
+    align-items: center;
+    position: fixed;
+    flex-direction: column;
+    z-index:3;
+}
+
+.logo{
+    height:15vh;
+    width:15vh;
+}
+
+.header{
+    display:flex;
+    width:100%;
+    height:100%;
+    background-color: rgb(58, 58, 58);
+    justify-content: flex-end;
+    align-items: center;
+    z-index:3;
+}
+
+.gifVideo{
+    right: 0;
+    object-fit: cover;
+    height:100vh;
+    width:100%;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(58, 58, 58);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color:rgb(25, 121, 1);
+    filter:grayscale(80%);
+}
+.sidebar a:hover {
+    filter: brightness(10%);
+  }
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+/*Expore*/
+#section2{
+    background-image: url(IMAGES/green\ waves.jpg);
+    background-color:black;
+    height:200vh;
+    width:100%;
+    background-size:contain;
+    display:flex;
+    border-top: rgb(50, 82, 2);
+    border-top-style: solid;
+    border-top-width:2vh;
+}
+
+/*news*/
+#section3{
+    background-image: url(IMAGES/stenvägg.jpg);
+    background-color:black;
+    height:100vh;
+    width:100%;
+    background-size:cover;
+    display:flex;
+    border-top: rgb(50, 82, 2);
+    border-top-width:2vh;
+    border-top-style: solid;
+}
+
+/*about*/
+#section4{
+    z-index:2;
+    background-image: url(images/green\ lines.jpg);
+    background-color:black;
+    height:100vh;
+    width:100%;
+    background-size:cover;
+    display:flex;
+    border-top: rgb(50, 82, 2);
+    border-top-width:2vh;
+    border-top-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+    /* products list */
+    .products-list {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+
+}
+
+/*Section 2*/
+/* produkter */
+.products {
+    height: 100%;
+    width: 75%;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 3fr);
+}
+.products img {
+    width: 15vw;
+    filter: drop-shadow(30px 10px 4px rgb(24, 24, 24));
+    }
+.products .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.products .item .item-container {
+    width: 20vw;
+    height: 100%;
+    background-color: #000;
+    border-radius: 25px;
+
+    position: relative;
+}
+.products .item .item-container .item-img {
+    width: 100%;
+    height: 60%;
+
+    background-color:rgb(58, 58, 58);
+
+    border: 1px solid #000;
+    border-radius: 25px 25px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products .item .item-container .desc {
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    height:100%;
+}
+.products .item .item-container .add-to-cart {
+  background-color: rgba(var(--right-side-bg-color), 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    padding: 5px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.products .item .item-container .add-to-cart img {
+    width: 32px;
+    height: 32px;
+}
+/* cart */
+.cart {
+    height: 100%;
+    width: 35%;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgb(0, 78, 0), lightgreen);
+}
+/* cart header */
+.cart-header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+/* cart items */
+.cart-items {
+    height:60%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/* cart item */ 
+.cart-item {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+.cart-item div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* item info */
+.cart-item .item-info {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    border-radius: 0 10px 10px 0;
+
+    padding: 10px;
+}
+.cart-item .item-info:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+    cursor: pointer;
+}
+.cart-item .item-info img {
+    width: 75px;
+}
+/* st pris */
+.cart-item .unit-price {
+    flex: 1;
+    font-size: 1.2rem;
+}
+/* antal */
+.cart-item .units {
+    flex: 1;
+}
+.cart-item .units .number {
+    margin: 0 10px;
+
+    font-size: 1.2rem;
+}
+.cart-item .units .btn {
+    width: 20px;
+    height: 20px;
+
+    background-color: rgb(242, 255, 58);
+
+    border-radius: 50%;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+}
+
+/* cart footer */
+    .cart-footer {
+    width: 100%;
+    background-color: rgb(255, 21, 21);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    border-left: 1px solid rgb(var(--right-side-bg-color));
+}
+.cart-footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 0;
+
+    font-size: 1.3rem;
+}
+.cart-footer .subtotal {
+    background-color: rgb(96, 255, 104);
+}
+.cart-footer .checkout {
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(0, 78, 0), lightgreen);
+}
+
+.checkoutBtn{
+    text-decoration: none;
+    color:whitesmoke;
+    font-weight: bold;
+}
+
+/*Section 3*/
+/*News product*/
+.newsProduct {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.newsProduct img {
+    width: 15vw;
+    filter: drop-shadow(30px 10px 4px rgb(24, 24, 24));
+    }
+.newsProduct .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.newsProduct .item .item-container {
+    width: 40vw;
+    height: 90%;
+    background-color: #000;
+    border-radius: 25px;
+
+    position: relative;
+}
+.newsProduct .item .item-container .item-img {
+    width: 100%;
+    height: 60%;
+
+    background-color:rgb(58, 58, 58);
+
+    border: 1px solid #000;
+    border-radius: 25px 25px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newsProduct .item .item-container .desc {
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+}
+.newsProduct .item .item-container .add-to-cart {
+  background-color: rgba(var(--right-side-bg-color), 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    padding: 5px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.newsProduct .item .item-container .add-to-cart img {
+    width: 32px;
+    height: 32px;
+}
+
+/*section 4*/
+/*About text*/
+.aboutContainer{
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+    opacity: 75%;
+    height:80%;
+    width:50%;
+}
+
+.aboutText{
+    color:whitesmoke;
+    size: 14;
+    margin-right:10px;
+    margin-left:10px;
+}
+
+/*Texten som man får när man har checkat ut*/
+.checkoutText{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
